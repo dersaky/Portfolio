@@ -3,10 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "type-check": "vue-tsc --noEmit",
-    "build": "npx vite build",
+    "build": "vite build",
+    "build:vercel": "NODE_ENV=production vite build",
+    "build:alt": "./node_modules/.bin/vite build",
+    "build:js": "node build.js",
     "preview": "vite preview"
   },
   "dependencies": {
