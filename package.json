@@ -10,7 +10,9 @@
   "scripts": {
     "dev": "vite",
     "type-check": "vue-tsc --noEmit",
-    "build": "vite build",
+    "build": "node custom-build.js",
+    "build:static": "node static-build.js",
+    "build:vite": "vite build",
     "build:vercel": "npx vite build",
     "build:alt": "node node_modules/vite/bin/vite.js build",
     "build:js": "node build.js",
