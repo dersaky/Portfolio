@@ -24,16 +24,66 @@
                       :class="['px-3 py-1 rounded-md text-sm border transition-colors', locale === 'en' ? 'bg-accent-500/20 text-accent-700 border-accent-500 dark:bg-primary-600/30 dark:text-primary-200 dark:border-primary-600' : 'bg-white text-gray-700 border-accent-300 hover:border-accent-500 dark:bg-dark-800 dark:text-gray-300 dark:border-dark-700 dark:hover:border-primary-600/60']">
                 EN
               </button>
-              <!-- Theme Toggle: pill switch (refined) -->
-              <button @click="toggleTheme" :aria-pressed="theme === 'dark'" class="ml-2 relative inline-flex items-center rounded-full transition-colors duration-300 select-none w-32 h-10 border bg-accent-100/80 border-accent-200 text-accent-700 dark:bg-dark-800 dark:border-dark-700 dark:text-gray-200">
-                <!-- Labels -->
-                <span class="absolute left-4 text-sm font-semibold pointer-events-none select-none" :class="theme === 'dark' ? 'text-gray-400' : 'text-accent-700'">DAY</span>
-                <span class="absolute right-4 text-sm font-semibold pointer-events-none select-none" :class="theme === 'dark' ? 'text-primary-300' : 'text-gray-500'">NIGHT</span>
-                <!-- Knob -->
-                <span class="absolute top-1 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 z-10"
-                      :class="theme === 'dark' ? 'right-1 bg-dark-900 text-primary-300 shadow-[0_0_0_2px_rgba(30,41,59,0.9),0_4px_10px_rgba(0,0,0,0.35)]' : 'left-1 bg-white text-accent-500 shadow-[0_0_0_2px_rgba(252,211,77,0),0_4px_10px_rgba(0,0,0,0.15)]'">
-                  <svg v-if="theme === 'dark'" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-                  <svg v-else class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/></svg>
+              <!-- Modern Theme Toggle -->
+              <button 
+                @click="toggleTheme" 
+                :aria-pressed="theme === 'dark'"
+                :title="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+                class="ml-4 relative inline-flex items-center justify-center w-14 h-8 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent-500 dark:focus-visible:ring-primary-500"
+                :class="theme === 'dark' ? 'bg-dark-700 hover:bg-dark-600' : 'bg-accent-100 hover:bg-accent-200'"
+              >
+                <!-- Track -->
+                <div class="absolute inset-0 flex items-center justify-between px-1.5">
+                  <!-- Sun Icon (always present but changes opacity) -->
+                  <svg 
+                    class="w-4 h-4 transition-opacity duration-300"
+                    :class="theme === 'dark' ? 'opacity-40 text-primary-300' : 'opacity-100 text-amber-500'"
+                    fill="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" />
+                    <path d="M12 1v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <path d="M12 21v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <path d="M4.22 4.22l1.42 1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <path d="M18.36 18.36l1.42 1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <path d="M1 12h2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <path d="M21 12h2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <path d="M4.22 19.78l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <path d="M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                  
+                  <!-- Moon Icon (always present but changes opacity) -->
+                  <svg 
+                    class="w-3.5 h-3.5 transition-opacity duration-300"
+                    :class="theme === 'dark' ? 'opacity-100 text-primary-300' : 'opacity-40 text-blue-900'"
+                    fill="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                  </svg>
+                </div>
+                
+                <!-- Thumb -->
+                <span 
+                  class="absolute left-1 w-6 h-6 rounded-full bg-white shadow-md transform transition-transform duration-300 flex items-center justify-center"
+                  :class="theme === 'dark' ? 'translate-x-6' : 'translate-x-0'"
+                >
+                  <svg 
+                    v-if="theme === 'dark'" 
+                    class="w-3.5 h-3.5 text-primary-500" 
+                    viewBox="0 0 24 24" 
+                    fill="currentColor"
+                  >
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                  </svg>
+                  <svg 
+                    v-else 
+                    class="w-4 h-4 text-amber-500" 
+                    viewBox="0 0 24 24" 
+                    fill="currentColor"
+                  >
+                    <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" />
+                  </svg>
                 </span>
               </button>
             </div>
