@@ -11,9 +11,10 @@
     "dev": "vite",
     "type-check": "vue-tsc --noEmit",
     "build": "vite build",
-    "build:vercel": "NODE_ENV=production vite build",
-    "build:alt": "./node_modules/.bin/vite build",
+    "build:vercel": "npx vite build",
+    "build:alt": "node node_modules/vite/bin/vite.js build",
     "build:js": "node build.js",
+    "build:sh": "bash build.sh",
     "preview": "vite preview"
   },
   "dependencies": {
