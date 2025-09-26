@@ -49,13 +49,13 @@
       
       <!-- Call to Action -->
       <div class="fade-in-up mt-16 text-center">
-        <div class="bg-white/80 border border-slate-200 rounded-2xl p-8 max-w-2xl mx-auto dark:from-primary-600/10 dark:to-primary-800/10 dark:border-primary-600/30">
-          <h3 class="text-2xl font-bold text-gray-900 mb-4 dark:text-white">{{ t('projects.cta.title') }}</h3>
-          <p class="text-gray-700 mb-6 leading-relaxed dark:text-gray-300">
+        <div class="bg-gradient-to-br from-primary-600/10 to-primary-800/10 border border-primary-600/30 rounded-2xl p-8 max-w-2xl mx-auto dark:bg-dark-800/90 dark:border-dark-700">
+          <h3 class="text-2xl font-bold text-white mb-4">{{ t('projects.cta.title') }}</h3>
+          <p class="text-gray-300 mb-6 leading-relaxed">
             {{ t('projects.cta.p1') }} 
             {{ t('projects.cta.p2') }}
           </p>
-          <a href="#projects" class="btn-primary inline-flex items-center">
+          <a href="#contact" class="btn-primary inline-flex items-center">
             <span>{{ t('projects.cta.button') }}</span>
             <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
