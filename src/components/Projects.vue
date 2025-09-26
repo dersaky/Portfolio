@@ -14,16 +14,16 @@
           class="fade-in-up group"
           :style="{ animationDelay: `${index * 150}ms` }"
         >
-          <div class="rounded-2xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-2xl bg-white/70 backdrop-blur-sm border border-accent-200 hover:border-accent-400 hover:shadow-accent-500/10 dark:bg-dark-700/70 dark:backdrop-blur-sm dark:border-dark-600 dark:hover:border-primary-600 dark:hover:shadow-primary-600/20">
+          <div class="rounded-2xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-2xl bg-white/70 backdrop-blur-sm border border-slate-200 hover:border-slate-300 hover:shadow-slate-400/10 dark:bg-dark-700/70 dark:backdrop-blur-sm dark:border-dark-600 dark:hover:border-primary-600 dark:hover:shadow-primary-600/20">
             <!-- Project Image/Icon -->
-            <div class="h-48 bg-gradient-to-br from-accent-400 to-accent-600 dark:from-primary-600 dark:to-primary-800 flex items-center justify-center relative overflow-hidden">
+            <div class="h-48 bg-gradient-to-br from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-800 flex items-center justify-center relative overflow-hidden">
               <div class="text-6xl">{{ project.icon }}</div>
               <div class="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-all duration-300"></div>
             </div>
             
             <!-- Project Content -->
             <div class="p-6">
-              <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-accent-700 transition-colors duration-300 dark:text-white dark:group-hover:text-primary-400">
+              <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-700 transition-colors duration-300 dark:text-white dark:group-hover:text-primary-400">
                 {{ t(project.titleKey) }}
               </h3>
               <p class="text-gray-600 mb-4 leading-relaxed dark:text-gray-300">
@@ -35,7 +35,7 @@
                 <span 
                   v-for="tech in project.technologies" 
                   :key="tech"
-                  class="px-3 py-1 bg-accent-500/10 text-accent-700 rounded-full text-xs border border-accent-300 dark:bg-primary-600/20 dark:text-primary-300 dark:border-primary-600/30"
+                  class="px-3 py-1 bg-primary-500/10 text-primary-700 rounded-full text-xs border border-slate-300 dark:bg-primary-600/20 dark:text-primary-300 dark:border-primary-600/30"
                 >
                   {{ tech }}
                 </span>
@@ -49,7 +49,7 @@
       
       <!-- Call to Action -->
       <div class="fade-in-up mt-16 text-center">
-        <div class="bg-gradient-to-r from-accent-200/60 to-accent-300/60 border border-accent-300 rounded-2xl p-8 max-w-2xl mx-auto dark:from-primary-600/10 dark:to-primary-800/10 dark:border-primary-600/30">
+        <div class="bg-white/80 border border-slate-200 rounded-2xl p-8 max-w-2xl mx-auto dark:from-primary-600/10 dark:to-primary-800/10 dark:border-primary-600/30">
           <h3 class="text-2xl font-bold text-gray-900 mb-4 dark:text-white">{{ t('projects.cta.title') }}</h3>
           <p class="text-gray-700 mb-6 leading-relaxed dark:text-gray-300">
             {{ t('projects.cta.p1') }} 

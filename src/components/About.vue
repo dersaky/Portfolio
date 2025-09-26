@@ -11,7 +11,7 @@
         <div class="fade-in-up">
           <div class="relative">
             <div class="w-full max-w-md mx-auto">
-              <div class="aspect-square bg-gradient-to-br from-accent-500 to-accent-700 dark:from-primary-600 dark:to-primary-800 rounded-2xl p-1 shadow-2xl shadow-accent-500/20 dark:shadow-primary-600/30">
+              <div class="aspect-square bg-gradient-to-br from-primary-500 to-primary-700 dark:from-primary-600 dark:to-primary-800 rounded-2xl p-1 shadow-2xl shadow-slate-400/10 dark:shadow-primary-600/30">
                 <div class="w-full h-full bg-white/70 backdrop-blur-sm dark:bg-dark-700/70 dark:backdrop-blur-sm rounded-2xl flex items-center justify-center">
                   <div class="text-6xl md:text-8xl font-bold text-gray-900 dark:text-primary-400">
                     &lt;/&gt;
@@ -21,8 +21,8 @@
             </div>
             
             <!-- Floating elements -->
-            <div class="absolute -top-4 -right-4 w-8 h-8 rounded-full animate-pulse bg-accent-500 dark:bg-primary-500"></div>
-            <div class="absolute -bottom-4 -left-4 w-6 h-6 rounded-full animate-pulse delay-500 bg-accent-700 dark:bg-primary-700"></div>
+            <div class="absolute -top-4 -right-4 w-8 h-8 rounded-full animate-pulse bg-primary-500 dark:bg-primary-500"></div>
+            <div class="absolute -bottom-4 -left-4 w-6 h-6 rounded-full animate-pulse delay-500 bg-primary-700 dark:bg-primary-700"></div>
           </div>
         </div>
         

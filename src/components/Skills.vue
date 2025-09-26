@@ -15,7 +15,7 @@
           :style="{ animationDelay: `${index * 100}ms` }"
         >
           <div class="text-center">
-            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-accent-400 to-accent-600 dark:from-primary-500 dark:to-primary-700 rounded-xl flex items-center justify-center text-2xl shadow-lg shadow-accent-500/20 dark:shadow-primary-600/30">
+            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary-400 to-primary-600 dark:from-primary-500 dark:to-primary-700 rounded-xl flex items-center justify-center text-2xl shadow-lg shadow-slate-400/10 dark:shadow-primary-600/30">
               {{ skill.icon }}
             </div>
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">{{ skill.name }}</h3>
@@ -27,7 +27,7 @@
       
       <!-- Additional info -->
       <div class="fade-in-up mt-16 text-center">
-        <div class="rounded-2xl p-8 max-w-4xl mx-auto bg-white/70 backdrop-blur-sm border border-accent-200 dark:bg-dark-800/70 dark:backdrop-blur-sm dark:border-dark-700">
+        <div class="rounded-2xl p-8 max-w-4xl mx-auto bg-white/70 backdrop-blur-sm border border-slate-200 dark:bg-dark-800/70 dark:backdrop-blur-sm dark:border-dark-700">
           <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">{{ t('skills.alwaysLearning.title') }}</h3>
           <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
             {{ t('skills.alwaysLearning.p1') }} 
@@ -35,7 +35,7 @@
           </p>
           <div class="flex flex-wrap justify-center gap-3">
             <span v-for="key in interestKeys" :key="key" 
-                  class="px-4 py-2 bg-accent-500/10 text-accent-700 rounded-full text-sm border border-accent-300 dark:bg-primary-600/20 dark:text-primary-300 dark:border-primary-600/30">
+                  class="px-4 py-2 bg-primary-500/10 text-primary-700 rounded-full text-sm border border-slate-300 dark:bg-primary-600/20 dark:text-primary-300 dark:border-primary-600/30">
               {{ t(key) }}
             </span>
           </div>

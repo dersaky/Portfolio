@@ -47,9 +47,10 @@ onMounted(() => {
 
   // Theme-aware colors
   const isDark = () => document.documentElement.classList.contains('dark')
-  let particleColor = 'rgba(249, 115, 22, 0.9)' // accent-500 (orange) in light
-  let glowColor = 'rgba(249, 115, 22, 0.4)'
-  let lineColorBase = '249, 115, 22'
+  // default to blue to avoid orange flash on load
+  let particleColor = 'rgba(59, 130, 246, 0.9)'
+  let glowColor = 'rgba(59, 130, 246, 0.4)'
+  let lineColorBase = '59, 130, 246'
 
   const applyPalette = () => {
     if (isDark()) {
@@ -58,10 +59,10 @@ onMounted(() => {
       glowColor = 'rgba(59, 130, 246, 0.4)'
       lineColorBase = '59, 130, 246'
     } else {
-      // orange palette for light
-      particleColor = 'rgba(249, 115, 22, 0.9)'
-      glowColor = 'rgba(249, 115, 22, 0.4)'
-      lineColorBase = '249, 115, 22'
+      // blue palette for light as well (softer and consistent)
+      particleColor = 'rgba(59, 130, 246, 0.85)'
+      glowColor = 'rgba(59, 130, 246, 0.35)'
+      lineColorBase = '59, 130, 246'
     }
   }
 

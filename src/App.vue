@@ -3,25 +3,25 @@
     <!-- Global Particle Background -->
     <ParticleBackground />
     <!-- Global overlay to unify background tone across sections (below particles, below content) -->
-    <div class="fixed inset-0 z-0 pointer-events-none bg-accent-100/60 dark:bg-dark-900/70"></div>
+    <div class="fixed inset-0 z-0 pointer-events-none bg-white/60 dark:bg-dark-900/70"></div>
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b bg-white/80 border-accent-200 dark:bg-dark-900/90 dark:border-dark-800">
+    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b bg-white/80 border-slate-200 dark:bg-dark-900/90 dark:border-dark-800">
       <div class="container-max px-6 py-4">
         <div class="flex justify-between items-center">
           <div class="text-xl font-bold text-gray-900 dark:text-primary-400">Dmytro</div>
           <div class="hidden md:flex items-center space-x-6">
-            <a href="#home" class="text-gray-700 hover:text-accent-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-primary-400">{{ t('nav.home') }}</a>
-            <a href="#skills" class="text-gray-700 hover:text-accent-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-primary-400">{{ t('nav.skills') }}</a>
-            <a href="#projects" class="text-gray-700 hover:text-accent-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-primary-400">{{ t('nav.projects') }}</a>
-            <a href="#contact" class="text-gray-700 hover:text-accent-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-primary-400">{{ t('nav.contact') }}</a>
+            <a href="#home" class="text-gray-700 hover:text-primary-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-primary-400">{{ t('nav.home') }}</a>
+            <a href="#skills" class="text-gray-700 hover:text-primary-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-primary-400">{{ t('nav.skills') }}</a>
+            <a href="#projects" class="text-gray-700 hover:text-primary-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-primary-400">{{ t('nav.projects') }}</a>
+            <a href="#contact" class="text-gray-700 hover:text-primary-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-primary-400">{{ t('nav.contact') }}</a>
             <!-- Language Switcher -->
             <div class="flex items-center space-x-2 ml-2">
               <button @click="setLocale('uk')"
-                      :class="['px-3 py-1 rounded-md text-sm border transition-colors', locale === 'uk' ? 'bg-accent-500/20 text-accent-700 border-accent-500 dark:bg-primary-600/30 dark:text-primary-200 dark:border-primary-600' : 'bg-white text-gray-700 border-accent-300 hover:border-accent-500 dark:bg-dark-800 dark:text-gray-300 dark:border-dark-700 dark:hover:border-primary-600/60']">
+                      :class="['px-3 py-1 rounded-md text-sm border transition-colors', locale === 'uk' ? 'bg-primary-500/10 text-primary-700 border-primary-400 dark:bg-primary-600/30 dark:text-primary-200 dark:border-primary-600' : 'bg-white text-gray-700 border-slate-300 hover:border-slate-400 dark:bg-dark-800 dark:text-gray-300 dark:border-dark-700 dark:hover:border-primary-600/60']">
                 UA
               </button>
               <button @click="setLocale('en')"
-                      :class="['px-3 py-1 rounded-md text-sm border transition-colors', locale === 'en' ? 'bg-accent-500/20 text-accent-700 border-accent-500 dark:bg-primary-600/30 dark:text-primary-200 dark:border-primary-600' : 'bg-white text-gray-700 border-accent-300 hover:border-accent-500 dark:bg-dark-800 dark:text-gray-300 dark:border-dark-700 dark:hover:border-primary-600/60']">
+                      :class="['px-3 py-1 rounded-md text-sm border transition-colors', locale === 'en' ? 'bg-primary-500/10 text-primary-700 border-primary-400 dark:bg-primary-600/30 dark:text-primary-200 dark:border-primary-600' : 'bg-white text-gray-700 border-slate-300 hover:border-slate-400 dark:bg-dark-800 dark:text-gray-300 dark:border-dark-700 dark:hover:border-primary-600/60']">
                 EN
               </button>
               <!-- Modern Theme Toggle -->
@@ -29,8 +29,8 @@
                 @click="toggleTheme" 
                 :aria-pressed="theme === 'dark'"
                 :title="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
-                class="ml-4 relative inline-flex items-center justify-center w-14 h-8 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent-500 dark:focus-visible:ring-primary-500"
-                :class="theme === 'dark' ? 'bg-dark-700 hover:bg-dark-600' : 'bg-accent-100 hover:bg-accent-200'"
+                class="ml-4 relative inline-flex items-center justify-center w-14 h-8 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-500"
+                :class="theme === 'dark' ? 'bg-dark-700 hover:bg-dark-600' : 'bg-slate-100 hover:bg-slate-200'"
               >
                 <!-- Track -->
                 <div class="absolute inset-0 flex items-center justify-between px-1.5">
@@ -90,7 +90,7 @@
           </div>
           <button 
             @click="toggleMobileMenu"
-            class="md:hidden text-gray-700 hover:text-accent-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-primary-400"
+            class="md:hidden text-gray-700 hover:text-primary-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-primary-400"
           >
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -99,16 +99,16 @@
         </div>
         
         <!-- Mobile Menu -->
-        <div v-if="mobileMenuOpen" class="md:hidden mt-4 pb-4 border-t pt-4 border-accent-200 dark:border-dark-800">
+        <div v-if="mobileMenuOpen" class="md:hidden mt-4 pb-4 border-t pt-4 border-slate-200 dark:border-dark-800">
           <div class="flex flex-col space-y-4">
             <div class="flex items-center space-x-3">
               <span class="text-gray-600 text-sm dark:text-gray-400">{{ t('nav.language') }}:</span>
               <button @click="setLocale('uk')"
-                      :class="['px-3 py-1 rounded-md text-sm border transition-colors', locale === 'uk' ? 'bg-accent-500/20 text-accent-700 border-accent-500 dark:bg-primary-600/30 dark:text-primary-200 dark:border-primary-600' : 'bg-white text-gray-700 border-accent-300 hover:border-accent-500 dark:bg-dark-800 dark:text-gray-300 dark:border-dark-700 dark:hover:border-primary-600/60']">
+                      :class="['px-3 py-1 rounded-md text-sm border transition-colors', locale === 'uk' ? 'bg-primary-500/10 text-primary-700 border-primary-400 dark:bg-primary-600/30 dark:text-primary-200 dark:border-primary-600' : 'bg-white text-gray-700 border-slate-300 hover:border-slate-400 dark:bg-dark-800 dark:text-gray-300 dark:border-dark-700 dark:hover:border-primary-600/60']">
                 UA
               </button>
               <button @click="setLocale('en')"
-                      :class="['px-3 py-1 rounded-md text-sm border transition-colors', locale === 'en' ? 'bg-accent-500/20 text-accent-700 border-accent-500 dark:bg-primary-600/30 dark:text-primary-200 dark:border-primary-600' : 'bg-white text-gray-700 border-accent-300 hover:border-accent-500 dark:bg-dark-800 dark:text-gray-300 dark:border-dark-700 dark:hover:border-primary-600/60']">
+                      :class="['px-3 py-1 rounded-md text-sm border transition-colors', locale === 'en' ? 'bg-primary-500/10 text-primary-700 border-primary-400 dark:bg-primary-600/30 dark:text-primary-200 dark:border-primary-600' : 'bg-white text-gray-700 border-slate-300 hover:border-slate-400 dark:bg-dark-800 dark:text-gray-300 dark:border-dark-700 dark:hover:border-primary-600/60']">
                 EN
               </button>
               <!-- Theme toggle in mobile (modern compact design) -->
@@ -138,10 +138,10 @@
                        : 'shadow-[0_0_15px_rgba(251,146,60,0.4)]'"></div>
               </button>
             </div>
-            <a href="#home" @click="closeMobileMenu" class="text-gray-700 hover:text-accent-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-primary-400">{{ t('nav.home') }}</a>
-            <a href="#skills" @click="closeMobileMenu" class="text-gray-700 hover:text-accent-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-primary-400">{{ t('nav.skills') }}</a>
-            <a href="#projects" @click="closeMobileMenu" class="text-gray-700 hover:text-accent-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-primary-400">{{ t('nav.projects') }}</a>
-            <a href="#contact" @click="closeMobileMenu" class="text-gray-700 hover:text-accent-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-primary-400">{{ t('nav.contact') }}</a>
+            <a href="#home" @click="closeMobileMenu" class="text-gray-700 hover:text-primary-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-primary-400">{{ t('nav.home') }}</a>
+            <a href="#skills" @click="closeMobileMenu" class="text-gray-700 hover:text-primary-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-primary-400">{{ t('nav.skills') }}</a>
+            <a href="#projects" @click="closeMobileMenu" class="text-gray-700 hover:text-primary-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-primary-400">{{ t('nav.projects') }}</a>
+            <a href="#contact" @click="closeMobileMenu" class="text-gray-700 hover:text-primary-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-primary-400">{{ t('nav.contact') }}</a>
           </div>
         </div>
       </div>
@@ -156,7 +156,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-8 relative z-10 bg-accent-100 border-t border-accent-200 dark:bg-dark-800 dark:border-dark-700">
+    <footer class="py-8 relative z-10 bg-slate-100 border-t border-slate-200 dark:bg-dark-800 dark:border-dark-700">
       <div class="container-max px-6 text-center">
         <p class="text-gray-600 dark:text-gray-400">© 2024 Dmytro. All rights reserved.</p>
       </div>

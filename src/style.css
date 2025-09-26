@@ -8,8 +8,8 @@
   }
   
   body {
-    /* Light theme defaults */
-    @apply bg-accent-50 text-gray-900 font-sans;
+    /* Light theme defaults (softer, more neutral) */
+    @apply bg-slate-50 text-slate-800 antialiased font-sans;
   }
 
   .dark body {
@@ -28,8 +28,8 @@
   }
   
   .btn-primary {
-    /* Light: soft orange */
-    @apply bg-accent-500 hover:bg-accent-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2 focus:ring-offset-accent-50;
+    /* Light: calm primary (blue) */
+    @apply bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-slate-50;
   }
 
   .dark .btn-primary {
@@ -38,8 +38,8 @@
   }
   
   .btn-secondary {
-    /* Light */
-    @apply border-2 border-accent-500 text-accent-600 hover:bg-accent-500 hover:text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2 focus:ring-offset-accent-50;
+    /* Light: subtle outline */
+    @apply bg-white border-2 border-slate-300 text-slate-700 hover:bg-slate-100 hover:border-slate-400 px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-slate-300 focus:ring-offset-2 focus:ring-offset-slate-50;
   }
 
   .dark .btn-secondary {
@@ -48,8 +48,8 @@
   }
   
   .skill-card {
-    /* Light */
-    @apply bg-white/70 backdrop-blur-sm border border-accent-200 rounded-lg p-4 hover:border-accent-400 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-accent-500/10;
+    /* Light: softer border and shadow */
+    @apply bg-white/80 backdrop-blur-sm border border-slate-200 rounded-lg p-4 hover:border-slate-300 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-slate-400/10;
   }
 
   .dark .skill-card {
